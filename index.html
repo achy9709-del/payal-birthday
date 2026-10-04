@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Happy Birthday Payal Choudhury ❤️</title>
+
+<style>
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    color: white;
+    background: linear-gradient(135deg, #ff758c, #a18cd1, #fbc2eb);
+    padding: 20px 0;
+    overflow-x: hidden;
+}
+.card {
+    width: 85%;
+    max-width: 400px;
+    padding: 30px 20px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.2);
+    box-shadow: 0 8px 30px #6d3b7540;
+    border: 1px solid #ffffff70;
+}
+.cake {
+    font-size: 75px;
+    animation: bounce 1.5s infinite;
+}
+h1 { font-size: 32px; }
+p { line-height: 1.7; }
+button {
+    background: white;
+    color: #b04487;
+    padding: 14px 22px;
+    border: none;
+    border-radius: 30px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+}
+#surprise {
+    display: none;
+    margin-top: 22px;
+    line-height: 1.8;
+    font-size: 18px;
+}
+.heart {
+    position: fixed;
+    bottom: -30px;
+    animation: float 6s linear infinite;
+    pointer-events: none;
+}
+@keyframes bounce {
+    50% { transform: translateY(-10px); }
+}
+@keyframes float {
+    to {
+        transform: translateY(-110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+</style>
+</head>
+
+<body>
+<div class="card">
+    <div class="cake">🎂</div>
+    <h1>Happy Birthday! 🎉</h1>
+    <h2>Dear Payal Choudhury ❤️</h2>
+
+    <p>
+        Today is all about YOU! 🥳<br>
+        May your life always be filled with
+        happiness, success and unforgettable memories.
+    </p>
+
+    <p>Lucky to have a friend like you! 🫂💖</p>
+
+    <button onclick="openSurprise()">
+        🎁 Open Your Surprise
+    </button>
+
+    <div id="surprise">
+        💖 Payal Choudhury, you are truly special! 💖
+        <br>
+        Keep smiling, keep shining ✨
+        <br>
+        May all your dreams come true.
+        <br><br>
+        🎂 HAPPY BIRTHDAY ONCE AGAIN! 🥳
+        <br>❤️ From a friend
+    </div>
+</div>
+
+<script>
+function openSurprise() {
+    document.getElementById("surprise").style.display = "block";
+}
+
+for (let i = 0; i < 20; i++) {
+    let h = document.createElement("div");
+    h.className = "heart";
+    h.innerHTML = ["❤️", "💖", "💕", "✨"][i % 4];
+    h.style.left = Math.random() * 100 + "vw";
+    h.style.fontSize = (16 + Math.random() * 20) + "px";
+    h.style.animationDelay = Math.random() * 6 + "s";
+    h.style.animationDuration = (4 + Math.random() * 5) + "s";
+    document.body.appendChild(h);
+}
+</script>
+</body>
+</html>
